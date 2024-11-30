@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Arima:wght@100..700&family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Gluten:wght@100..900&family=Trirong:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Arima:wght@100..700&family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Gluten:wght@100..900&family=Playwrite+AT:ital,wght@0,100..400;1,100..400&family=Trirong:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    
+
+<style>
+    body {
+        margin: 0px;
+        padding: 0px;
+        top: 0px;
+    }
+
+    .container1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0px 0px;
+        padding: 0px;
+        top: 0px;
+        height: 200px;
+        background-color: transparent;
+        z-index: -1;
+        background: #218838;
+    }
+
+    .navbar1 {
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        justify-content: center;
+        padding: 0;
+        margin: auto;
+    }
+
+    .navbar1 li {
+        margin: 0 15px;
+        position: relative;
+        font-family: "Baloo Bhai 2", sans-serif;
+        font-size: 20px;
+    }
+
+    .navbar1 a {
+        text-decoration: none;
+        color: #e8e4e4f2;
+        padding: 5px 0;
+        display: inline-block;
+        transition: all 0.3s ease;
+    }
+
+    .navbar1 a::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: rgb(0, 0, 0);
+        transition: width 0.6s ease;
+    }
+
+    .navbar1 a:hover {
+        color: rgb(0, 0, 0);
+        transform: scale(1.10);
+    }
+
+    .navbar1 a:hover::after {
+        width: 100%;
+    }
+
+    .navbar2 {
+        display: flex;
+        gap: 25px;
+        flex-wrap: wrap;
+        margin: auto;
+
+    }
+
+    .navbar2 li {
+        list-style: none;
+        cursor: pointer;
+        font-family: "Baloo Bhai 2", sans-serif;
+        font-size: 20px;
+        position: relative;
+    }
+
+    .navbar2 a {
+        text-decoration: none;
+        z-index: -1;
+        color: #e8e4e4f2;
+        display: inline-block;
+        transition: all 0.3s ease;
+    }
+
+    .navbar2 a::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: rgb(0, 0, 0);
+        transition: width 0.6s ease-in-out;
+    }
+
+    .navbar2 a:hover {
+        color: rgb(0, 0, 0);
+        transform: scale(1.10);
+    }
+
+    .navbar2 a:hover::after {
+        width: 100%;
+        transform: scale(1.10);
+    }
+
+    .logo {
+        height: auto;
+        width: auto;
+    }
+
+    .logo img {
+        margin-top: 23px;
+        height: 100px;
+        width: 194px;
+        filter: drop-shadow(2px 2px 3px rgb(110, 108, 108));
+        animation: logo 4s infinite ease-in-out;
+    }
+
+    @keyframes logo {
+        0% {
+            transform: rotate(6deg);
+        }
+
+        25% {
+            transform: rotate(-6deg);
+        }
+
+        50% {
+            transform: rotate(6deg);
+        }
+
+        75% {
+            transform: rotate(-6deg);
+        }
+
+        100% {
+            transform: rotate(6deg);
+        }
+    }
+
+    .icons {
+        display: flex;
+        position: absolute;
+    }
+
+    .search {
+        margin-right: 1170px;
+        font-size: 27px;
+        color: #e8e4e4f2;
+    }
+
+    .user {
+        font-size: 27px;
+        color: #e8e4e4f2;
+    }
+
+    .cart {
+        font-size: 27px;
+        margin-left: 20px;
+        color: #e8e4e4f2;
+        ;
+
+    }
+
+    .thumbnail {
+        list-style: none;
+        align-items: center;
+        justify-content: center;
+        background-color: black;
+        text-align: center;
+    }
+
+    .thumbnail li {
+        color: aliceblue;
+        padding: 4px 4px;
+        font-size: 17px;
+        font-family: sans-serif;
+    }
+
+    .item {
+        position: relative;
+        display: inline-block;
+        margin-right: 10px;
+    }
+
+    .item:hover .preview {
+        display: block;
+    }
+    .fadeincontainer{
+        display: flex;
+        position: relative;
+        boder: 2px solid red;
+        height: 100%;
+        width: 100%;
+        top: 30px; 
+        align-items: center;
+    }
+
+    .product-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin: 80px 200px;
+    }
+
+    .product-item {
+        display: flex;
+        flex-direction: column;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 15px;
+        margin: 10px;
+        width: 300px;
+        text-align: center;
+        background-color: #f9f9f9;
+        transition: box-shadow 0.3s ease;
+        position: relative;
+        box-shadow: 0px 0px 30px rgba(185, 164, 164, 1);
+    }
+
+    .product-item img {
+        width: 100%;
+        height: auto;
+    }
+
+    .product-item h3 {
+        font-size: 18px;
+        margin: 10px 0;
+    }
+
+    .price {
+        font-size: 16px;
+        font-weight: bold;
+        color: #333;
+    }
+
+    .add-to-cart {
+        background-color: #28a745;
+        color: white;
+        border: none;
+        padding: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .add-to-cart:hover {
+        background-color: #218838;
+        transform: scale(1.05);
+    }
+
+    .navbar1 a.active {
+        color: rgb(0, 0, 0);
+        /* Change color to black for the active link */
+        cursor: default;
+        transform: scale(1.10);
+    }
+
+    /* Slider container */
+    .slider {
+    position: relative;
+    width: 100%;
+    max-width: 847px;
+    height: 749px;
+    margin-top: 0px;
+    margin-left: 232px;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px rgba(185, 164, 164, 1);
+    border-radius: 20px;
+}
+    /* Slider images */
+    .slides {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        /* Hidden by default */
+        transition: opacity 1s ease-in-out;
+        /* Smooth fade effect */
+    }
+
+    /* Active slide */
+    .active {
+        opacity: 1;
+        /* Show active slide */
+    }
+    .sideline{
+        display: flex;
+        flex-direction: column;
+        margin-left: 8px;
+        bordr: 2px solid red;
+        justify-content: center;
+        width: 45%;
+    }
+    .sideline img{
+        width: 67%;
+        height: 44%;
+        margin: 10px;
+        box-shadow: 0px 0px 10px rgba(185, 164, 164, 1);
+        border-radius: 20px;
+    }
+</style>
+<link rel="stylesheet" href="media.css">
+</head>
+<body>
+    <div class="thumbnail">
+        <li>We are accepting Easypaisa and Jazzcash payments.Your payments and personal info will not effect at any
+            circumstances</li>
+    </div>
+    <div class="container1">
+        <div class="icons">
+            <i class="fa fa-search search" aria-hidden="true"></i>
+            <i class="fa fa-user user" aria-hidden="true"></i>
+            <i class="fa fa-shopping-cart cart" aria-hidden="true"></i>
+        </div>
+        <div class="logo">
+            <img src="Logo.png" alt="">
+        </div>
+        <div>
+            <ul class="navbar1">
+                <li><a href="practice.html">Home</a></li>
+                <li><a href="sales.html">Sales</a></li>
+                <li><a href="babyclothing.html">Baby Clothing</a></li>
+                <li><a href="#">Shoes</a></li>
+                <li><a href="#">Hats</a></li>
+                <li><a href="#">Premium Category</a></li>
+                <li><a href="#">Toys</a></li>
+                <li><a href="#">Gifting</a></li>
+            </ul>
+        </div>
+        <div class="navbar2">
+            <li><a href="#">Baby Care</a></li>
+            <li><a href="#">Jewellery & Accessories</a></li>
+            <li><a href="#">Track your order</a></li>
+        </div>
+    </div>
+    <div class="fadeincontainer">
+        <div class="slider salesslider">
+            <img src="fadeitem 1.jpg" alt="Image 1" class="slides active">
+            <img src="fadeitem 2.jpg" alt="Image 2" class="slides">
+            <img src="fadeitem 3.jpg" alt="Image 3" class="slides">
+        </div>
+        <div class="sideline">
+            <img src="sideline 1.jpg" alt="">
+            <img src="sideline 2.jpg" alt="">
+        </div>
+    </div>
+    <div class="saleslistcontainer">
+    <div class="product-list">
+        <div class="product-item">
+            <img src="Item 1.png" alt="Item 1">
+            <h3>Item Title 1</h3>
+            <p>Description of Item 1</p>
+            <span class="price">$10.00</span>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="product-item">
+            <img src="Item 2.png" alt="Item 2">
+            <h3>Item Title 2</h3>
+            <p>Description of Item 2</p>
+            <span class="price">$15.00</span>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="product-item">
+            <img src="Item 3.png" alt="Item 3">
+            <h3>Item Title 3</h3>
+            <p>Description of Item 3</p>
+            <span class="price">$20.00</span>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <!-- Add more product items as needed -->
+    </div>
+
+    <div class="product-list">
+
+        <div class="product-item">
+            <img src="Item 4.png" alt="Item 1">
+            <h3>Item Title 1</h3>
+            <p>Description of Item 1</p>
+            <span class="price">$10.00</span>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="product-item">
+            <img src="Item 5.png" alt="Item 2">
+            <h3>Item Title 2</h3>
+            <p>Description of Item 2</p>
+            <span class="price">$15.00</span>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="product-item">
+            <img src="Item 6.png" alt="Item 3">
+            <h3>Item Title 3</h3>
+            <p>Description of Item 3</p>
+            <span class="price">$20.00</span>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+    </div>
+    <div class="product-list">
+        <div class="product-item">
+            <img src="Item 2.png" alt="Item 2">
+            <h3>Item Title 2</h3>
+            <p>Description of Item 2</p>
+            <span class="price">$15.00</span>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="product-item">
+            <img src="Item 3.png" alt="Item 3">
+            <h3>Item Title 3</h3>
+            <p>Description of Item 3</p>
+            <span class="price">$20.00</span>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="product-item">
+            <img src="Item 4.png" alt="Item 1">
+            <h3>Item Title 1</h3>
+            <p>Description of Item 1</p>
+            <span class="price">$10.00</span>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+    </div>
+    <!-- Add more product items as needed -->
+    </div>
+</div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const currentPage = window.location.pathname.split("/").pop();
+            console.log("Current Page:", currentPage); // Log current page
+
+            const navLinks = document.querySelectorAll('.navbar1 a');
+
+            navLinks.forEach(link => {
+                console.log("Link Href:", link.getAttribute('href')); // Log each link's href
+                if (link.getAttribute('href') === currentPage) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            });
+        });
+    </script>
+    <script>
+        // JavaScript for Slider
+        const slides = document.querySelectorAll(".slides");
+        let currentSlide = 0;
+
+        function showNextSlide() {
+            // Hide the current slide
+            slides[currentSlide].classList.remove("active");
+
+            // Move to the next slide (or loop back to the first)
+            currentSlide = (currentSlide + 1) % slides.length;
+
+            // Show the next slide
+            slides[currentSlide].classList.add("active");
+        }
+
+        // Change slide every 3 seconds
+        setInterval(showNextSlide, 3000);
+    </script>
+</body>
+
+</html>
